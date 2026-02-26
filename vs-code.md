@@ -14,9 +14,46 @@ Coming soon ..
 
 Then VS code works seemlessly with Markdown and quite well with git repos. 
 
+## Useful VS code things 
+
+`Cmd + Shift + P` opens the Command Palette.
+
+`Cmd + K` then `Cmd + S` opens keyboard shortcuts. From here you can create your own keyboard shortcuts for things. 
+
+`Cmd + ,` opens settings.
+
+`Cmd + /` will comment highlighted block. (move this to python)
+
+## Modifying preferences with `json`
+
+In vscode you can update and set your preferences in the `json` file. 
+
+To open the `json` file
+
+`Cmd + Shift + P` and type Preferences: Open User Settings (JSON)
+
+In this file you can add recipes (as we will see later in the setting up for latex section), defaults (python), and many other preferences. 
+
+*I will try and add my json file to the repo and incllude some explanation fo what everything does*
+
+
 ## Setting up VS code for LaTeX 
 
 This is no easy task. Coming soon. 
+
+*This section isn't complete, but I will add stuff here as they arise for me*
+
+#### Disabling Copilot AI for LaTeX (only)
+
+add 
+
+`"github.copilot.enable":{
+    "*": true,
+    "latex": false
+}` 
+
+to your json file.
+
 
 ## Setting up VS code for Python 
 
@@ -69,34 +106,26 @@ If a package isn't available by conda, pip can be used
 
 #### Connect VS code to `py` 
 
-Open VS code from the activated environment 
+Open VS code, and open desired "workspace"
 
-`code .` - this opens vs code 
+`Cmd + Shift + P` then navigate to Select Python Interpreter. Make sure you chose the Interpreter path that includes your new environment. 
 
-##### Setiing `py` as the global default interpreter
+(A workspace is any folder opened separately in a vs code window)
+
+*This step needs to be completed for every new "workspace" you wish to use python in* (This is a vs code bug)
+
+VS code should remember the Python interpreter for each workspace. 
+
+### Extensions 
+
+Important extensions for using Python in vs code are Python, Pylance and Jupyter (if you want jupyter notebook style programming). All subsequent necessary extensions should download and install with the installation of these extensions. 
+
+### Further Personalisation
+
+##### Cells 
 
 
 
-1. `Cmd + Shift + P` - opens Command Palette
-2. Go to **Preferences: Open User Settings (JSON)**
-2. Add 
-
-` {
-    "python.defaultInterpreterPath": "/opt/miniconda3/envs/py/bin/python"
-}`
-
-*Check that this is the correct path, by going to* `Python:select Interpreter` *and copying the path that specifies your desired environment*
-
-3. Then close the `json` file and quit VS code. 
-4. Reopen VS code to check that the python interpreter is the correct one. 
-
-##### Enable Automatic Terminal Activation 
-
-Open settings `CMd + ,` 
-
-Search Python > Terminal: Activate Environment - make sure this is checked. 
-
-Now VS code is conected to the desired python environment. 
 
 
 
