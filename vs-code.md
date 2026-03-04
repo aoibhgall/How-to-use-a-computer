@@ -122,7 +122,7 @@ Important extensions for using Python in vs code are Python, Pylance and Jupyter
 
 ### Further Personalisation
 
-##### Cells 
+##### Cells
 
 
 
