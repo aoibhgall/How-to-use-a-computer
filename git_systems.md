@@ -28,3 +28,19 @@ To link your repos with your local set up, navigate to the location you want to 
 
 
 Each time you commit you leave a message to your future self of what you changed. Then at the end of the day/session you push all of the commits to store them in git. 
+
+#### Git Ignore 
+
+If you want git to ignore any files or file types. 
+
+Create a file in your repo named `.gitignore` *I normally just make this with vim in the terminal*
+
+*vim notes coming soon* 
+
+The content of the gitignore file is just all the files you want git to ignore. 
+
+For example 
+
+- filename.py - specifically ignores this file
+- *.png - ignores all files ending in .png
+
