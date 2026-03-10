@@ -1,12 +1,16 @@
 # Setting up and locally using LaTeX
 
+If you don't want to use latex locally [Overleaf](https://www.overleaf.com) is a fantastic place to write and edit with latex. 
 
+I mainly use my local latex set up when I want to version control them with Git, or when they are too large for the free version of Overleaf to compilie. 
 
 ## Set up 
 
-You can find most of the set up instructions for latex in `vs-code.md` 
+Download and install [TeX Live](https://www.tug.org/texlive/) or on MacOs download and install [MacTeX](https://www.tug.org/mactex/mactex-download.html)
 
-Here I will include anything that is general latex or non-specific for latex local set up. 
+
+
+
 
  ## Writing a thesis with LaTeX
 

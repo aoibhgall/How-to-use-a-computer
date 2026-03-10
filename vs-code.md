@@ -70,45 +70,20 @@ So the desired set up is:
 - `py` - environment for general daily use 
 - `project_i` - environment for a specific project if needed. 
 
-#### Create the `py` environment 
+*Instructions on creating environments in python are in the python file*
 
-In the terminal, in the home directory 
 
-`conda create -n py python=3.11` 
+### Extensions 
 
-or whatever python version you like. 
-
-To activate use 
-
-`conda activate py`
-
-to deactivate use 
-
-`conda deactivate py` .
-
-So now activate your environment. and you should see 
-
-`(py)` instead of `(base)` in your terminal. 
-
-#### Install necessary packages 
-
-In `(py)` install the essentials 
-
-`conda install numpy pandas matplotlib scipy`
-
-Also possibily useful 
-
-`conda install seaborn jupyter ipython` 
-
-If a package isn't available by conda, pip can be used
-
-`pip install package`
+Important extensions for using Python in vs code are **Python, Pylance and Jupyter** (if you want jupyter notebook style programming). All subsequent necessary extensions should download and install with the installation of these extensions. 
 
 #### Connect VS code to `py` 
 
+Activate your environemt `conda activate py`
+
 Open VS code, and open desired "workspace"
 
-`Cmd + Shift + P` then navigate to Select Python Interpreter. Make sure you chose the Interpreter path that includes your new environment. 
+`Cmd + Shift + P` then navigate to **Select Python Interpreter**. Make sure you chose the Interpreter path that includes your new environment. 
 
 (A workspace is any folder opened separately in a vs code window)
 
@@ -116,13 +91,27 @@ Open VS code, and open desired "workspace"
 
 VS code should remember the Python interpreter for each workspace. 
 
-### Extensions 
+*You can set your env to be the default, but vscode often ignores this - it can't hurt though* 
 
-Important extensions for using Python in vs code are Python, Pylance and Jupyter (if you want jupyter notebook style programming). All subsequent necessary extensions should download and install with the installation of these extensions. 
+To ensure vscode activates your environment in the terminal navigaate to `Python > Terminal: Activate Environment` and check this box.
+
+To set your `py` environment as Global Default Interpreter:
+
+1. `Cmd + Shift + P` 
+2. Preferences: Open User Settings (JSON)
+3. Add `"python.defaultInterpreterPath": "/Users/YOUR_USERNAME/miniconda3/envs/py/bin/python"`
+
+*Or just search Select Interpreter Path and copy that address*
+
+
+##### Cells
+
+
+If you want to use **Cells** in python in vscode you need to work with Jupyter. With this you  run in the *Interactive Window* but this is fairly intuative and works automatically on any `.py` file with cells. 
 
 ### Further Personalisation
 
-##### Cells
+
 
 
 
