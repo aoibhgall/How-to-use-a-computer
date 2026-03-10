@@ -8,7 +8,7 @@ I mainly use my local latex set up when I want to version control them with Git,
 
 Download and install [TeX Live](https://www.tug.org/texlive/) or on MacOs download and install [MacTeX](https://www.tug.org/mactex/mactex-download.html)
 
-
+I use vscode to edit LaTeX locally. Go to the vscode page to follow the instructions for setting up vscode for latex. 
 
 
 

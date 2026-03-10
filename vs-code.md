@@ -9,10 +9,7 @@ It's not always so clear how you set it up for these things
 
 ## Initial set up 
 
-Coming soon ..
-
-
-Then VS code works seemlessly with Markdown and quite well with git repos. 
+Download and install [VScode](https://code.visualstudio.com/download)
 
 ## Useful VS code things 
 
@@ -39,9 +36,90 @@ In this file you can add recipes (as we will see later in the setting up for lat
 
 ## Setting up VS code for LaTeX 
 
-This is no easy task. Coming soon. 
+Once you have TeX Live installed you can then set up vscode for latex. 
 
-*This section isn't complete, but I will add stuff here as they arise for me*
+The most important thing is the Latex Workshop Extension. Go to Extensions and search Latex Workshop. 
+
+To use latex without issues you need a couple of things
+
+####  pdflatex, biber, bibtex 
+
+add this to you settings json 
+
+```
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": ["%DOCFILE%"]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"]
+    }
+
+
+  ],
+```
+
+this tells Latex Workshop about pdflatex, biber and bibtex, which are important for our compiling recipe. 
+
+#### Latex recipes 
+
+The most stable compiling recipe is pdflatex -> biber -> pdflatex ->pdflatex. 
+
+I always ran into issues with the bibliography when I tried to use any other recipe. 
+
+To execute this recipe in vscode everytime you want to compile, add the following to the settings json file 
+
+```
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex -> biber -> pdflatex*2",
+      "tools": [
+        "pdflatex",
+        "biber",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+    ]
+    }
+
+  ],
+```
+
+This write the recipe, now we also need to add `"latex-workshop.latex.recipe.default": "pdflatex -> biber -> pdflatex*2",` to set it as the default, and `"latex-workshop.intellisense.citation.backend": "biblatex",` to cement biblatex for the bibliography.  
+
+#### pfd preview 
+
+If you want to use a side by side pdf preview and editor, add 
+```
+"workbench.editorAssociations": {
+    "*.pdf": "default"
+},
+```
+to json settings.
+
+
 
 #### Disabling Copilot AI for LaTeX (only)
 
@@ -53,6 +131,8 @@ add
 }` 
 
 to your json file.
+
+Once you've added all of your preferences, restart vscode and it should work. 
 
 
 ## Setting up VS code for Python 
