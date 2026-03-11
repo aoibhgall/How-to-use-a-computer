@@ -34,7 +34,7 @@ In this file you can add recipes (as we will see later in the setting up for lat
 *I will try and add my json file to the repo and incllude some explanation fo what everything does*
 
 
-## Setting up VS code for LaTeX 
+# Setting up VS code for LaTeX 
 
 Once you have TeX Live installed you can then set up vscode for latex. 
 
@@ -135,7 +135,7 @@ to your json file.
 Once you've added all of your preferences, restart vscode and it should work. 
 
 
-## Setting up VS code for Python 
+# Setting up VS code for Python 
 
 My preference for python programming would typically be Spyder, which is built for python, but it's not working as well for me on my mac as it used to on my windows machine. My goal is now to set up VScode for python in a spyder-similar set up. And to keep it smart with miniconda and proper environments. 
 
@@ -189,7 +189,47 @@ To set your `py` environment as Global Default Interpreter:
 
 If you want to use **Cells** in python in vscode you need to work with Jupyter. With this you  run in the *Interactive Window* but this is fairly intuative and works automatically on any `.py` file with cells. 
 
-### Further Personalisation
+## Further Personalisation
+
+### Preamble 
+
+To create a premable you need to use **Snippets**
+
+1. Preferences: Configure User Snippets
+2. python.json
+3. add snippet 
+
+My snippet 
+
+```
+{
+  "Python Preamble": {
+    "prefix": "pypreamble",
+    "body": [
+      "# -*- coding: utf-8 -*-",
+      "\"\"\"",
+      "Created on ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      "",
+      "@author: aoibhgall",
+      "\"\"\"",
+      "",
+      "",
+      "#%% importing essentials",
+      "import numpy as np",
+      "import scipy.sparse as sparse",
+      "import scipy.sparse.linalg as slinalg",
+      "import matplotlib",
+      "matplotlib.use('TkAgg')",
+      "import matplotlib.pyplot as plt",
+      "import matplotlib.animation as animation",
+      "",
+      "",
+      "#%%"
+    ],
+    "description": "Python scientific preamble"
+  }
+}
+```
 
 
 

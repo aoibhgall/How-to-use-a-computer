@@ -27,6 +27,20 @@ makes a new directory
 
 `mkdir projects` makes the `projects` directory 
 
+### `ls` list 
+
+`ls` lists everything in the `cd`
+
+`ls -l` gives the list of all with permissions and timestamp
+
+`ls -al` similar to `ls -l` but with info about the parent directories as well
+
+`.` this directory, `..` parent directory 
+
+### `cp` copy 
+
+`cp file directory` copies file to directory 
+
 ## Useful things to install 
 
 
