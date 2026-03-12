@@ -134,6 +134,39 @@ to your json file.
 
 Once you've added all of your preferences, restart vscode and it should work. 
 
+## Personalisation 
+
+It is possible to set up personal latex templates in vscode with **Snippets** 
+
+1. `Cmd + Shift + P` 
+2. Snippets: Congfigure Snippets 
+3. open latex.json
+4. add template here in the following form. 
+
+``` 
+    "Name of Template": {
+      "prefix": "template_name",
+      "body": [
+        "\\documentclass[11pt]{article}",
+        "",
+        "\\usepackage{}",
+        "*rest of packagaes/commands you list to use*",
+        "",
+        "\\title{${1:Template Name}}",
+        "\\author{}",
+        "\\date{\today}",
+        "",
+        "\\begin{document}",
+        "",
+        "\\maketitle",
+        "",
+        "\\end{document}"
+      ],
+      "description": Template for ________"
+    }
+```
+You can have many templates for different types of documents, just add them into latex.json with a new template name in this style. 
+
 
 # Setting up VS code for Python 
 
