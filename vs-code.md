@@ -264,6 +264,13 @@ My snippet
 }
 ```
 
+So now when you create a new python file, type `pypreamble + tab` 
+and this writes into the file. 
+
+### Plotting 
+
+I've also created a plotting snippet.
+
 
 
 

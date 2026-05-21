@@ -61,3 +61,15 @@ Connect Python to jupyter
 
 Check environments with `conda env list`
 
+# Using Python in Jupyter Notebooks 
+
+Sometimes we can't always use python locally. 
+For example, when we want to work with large data sets or our collaborators like to use Jupyter Notebooks. 
+
+Jupyter Notebooks are a useful and powerfull tool for 
+data science and analysis. Also they made presenting your work with code and plots and notes very easy. 
+
+### Markdown with Jupyter
+
+You can use Markdown cells along with coding to explain what's going on. Just select markdown at the top of the page where it says `Code` by default to turn on this setting. Then proceed with Markdown as normal. 
+
